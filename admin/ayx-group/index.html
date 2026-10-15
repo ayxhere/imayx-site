@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex,nofollow">
+<title>AyX Group Admin — IMAYX</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- Login view -->
+<div id="login-view" hidden>
+  <div class="login-card">
+    <a class="logo" href="https://imayx.in/">IMAY<b>X</b></a>
+    <h1>AyX Group Admin</h1>
+    <p class="muted">Restricted area. Sign in with your administrator account.</p>
+    <div class="api-note muted" id="login-api-note" hidden></div>
+    <form id="login-form" autocomplete="off">
+      <label>Username
+        <input type="text" id="login-user" name="username" autocomplete="username" required>
+      </label>
+      <label>Password
+        <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
+      </label>
+      <div class="form-error" id="login-error" role="alert" hidden></div>
+      <button type="submit" class="btn primary block" id="login-submit">Sign in</button>
+    </form>
+    <div id="totp-step" hidden>
+      <p class="muted" style="margin-bottom:6px"><strong style="color:var(--text)">Two-factor authentication</strong></p>
+      <p class="muted" style="margin-bottom:16px">Enter the 6-digit code from your authenticator app.</p>
+      <form id="totp-form" autocomplete="off">
+        <label>Authentication code
+          <input type="text" id="totp-code" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" required>
+        </label>
+        <div class="form-error" id="totp-error" role="alert" hidden></div>
+        <button type="submit" class="btn primary block" id="totp-submit">Verify</button>
+        <button type="button" class="btn ghost block" id="totp-back" style="margin-top:8px">← Back to sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- App shell -->
+<div id="app" hidden>
+  <aside id="sidebar">
+    <div class="side-head">
+      <a class="logo" href="https://imayx.in/">IMAY<b>X</b></a>
+      <span class="pill">AyX Group</span>
+    </div>
+    <nav id="side-nav">
+      <a href="#/overview" data-route="overview"><span class="ni">📊</span>Overview</a>
+      <a href="#/announcements" data-route="announcements"><span class="ni">📣</span>Announcements</a>
+      <a href="#/push" data-route="push"><span class="ni">🔔</span>Push</a>
+      <a href="#/status" data-route="status"><span class="ni">🕒</span>Statuses</a>
+      <a href="#/inbox" data-route="inbox"><span class="ni">✉️</span>Inbox<span class="nav-badge" id="nav-inbox-badge" hidden></span></a>
+      <a href="#/installations" data-route="installations"><span class="ni">📱</span>Installations</a>
+      <a href="#/media" data-route="media"><span class="ni">🖼️</span>Media</a>
+      <a href="#/audit" data-route="audit"><span class="ni">🧾</span>Audit logs</a>
+      <a href="#/security" data-route="security"><span class="ni">🛡️</span>Security</a>
+    </nav>
+    <div class="side-foot">
+      <button class="btn ghost block" id="logout-btn">Sign out</button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="main-col">
+    <header id="topbar">
+      <button id="menu-btn" aria-label="Open menu">☰</button>
+      <span id="page-title">Overview</span>
+    </header>
+    <main id="view"></main>
+  </div>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

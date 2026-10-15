@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="index,follow">
+<title>Info — IMAYX</title>
+<meta name="description" content="Information about IMAYX apps and the AyX Group community channel.">
+<link rel="canonical" href="https://imayx.in/web/info">
+<style>
+:root{--bg:#000;--card:#0b0b0b;--line:#1c1c1f;--text:#f4f4f5;--soft:#9a9aa3;--accent:#8b5cf6;--accent2:#c4b5fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;background:rgba(0,0,0,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;letter-spacing:.5px;color:var(--text);text-decoration:none}.logo b{color:var(--accent)}
+.hero{padding:64px 0 30px}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.12;letter-spacing:-1px;margin-bottom:14px}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--soft);font-size:17px;max-width:600px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:16px 0}
+.card h3{font-size:16px;margin-bottom:6px}
+.card p,.card li{color:var(--soft);font-size:15px}
+.card ol{margin:8px 0 0 20px}
+.card li{margin-bottom:6px}
+.btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:14px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none;font-size:15px}
+.btn.p{background:var(--accent);border-color:var(--accent);color:#fff}
+.link{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--soft);font-size:14px;text-align:center;margin-top:50px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="https://imayx.in/">IMAY<b>X</b></a></div></nav>
+<main class="wrap">
+
+  <div id="connect-block" hidden>
+    <section class="hero">
+      <h1>Connect to <span>AyX Group</span></h1>
+      <p class="lead">AyX Group is the official IMAYX community channel inside AyX WhatsApp — announcements and statuses delivered by IMAYX, with a private line to the admin.</p>
+    </section>
+    <div class="card">
+      <h3>How it works</h3>
+      <ol>
+        <li>Install or update <strong>AyX WhatsApp</strong> — AyX Group appears as its own section, separate from your chats.</li>
+        <li>Your installation gets a random anonymous ID. No account, no phone number needed for this feature.</li>
+        <li>Official announcements and statuses sync automatically, even if a push notification is missed.</li>
+        <li>Anything you send to the admin stays private — visible only to you and authorized IMAYX admins, never to other users.</li>
+      </ol>
+    </div>
+    <div class="btns">
+      <a class="btn p" href="https://imayx.in/ayx/whatsapp/">Get AyX WhatsApp</a>
+      <a class="btn" href="https://hello.imayx.in/">About AyX Group</a>
+      <a class="btn" href="https://imayx.in/ayx/whatsapp/privacy/">Privacy policy</a>
+    </div>
+  </div>
+
+  <div id="generic-block" hidden>
+    <section class="hero">
+      <h1>IMAY<b>X</b> <span>Info</span></h1>
+      <p class="lead">Notes, links and explainers for IMAYX apps — including AyX Group, the official announcement channel inside AyX WhatsApp.</p>
+    </section>
+    <div class="card">
+      <h3>AyX Group</h3>
+      <p>Official announcements and statuses from IMAYX, delivered in-app. Messages you send stay private between you and authorized admins. <a class="link" href="https://hello.imayx.in/">Learn more</a></p>
+    </div>
+    <div class="btns">
+      <a class="btn p" href="https://imayx.in/">imayx.in</a>
+      <a class="btn" href="https://imayx.in/ayx/whatsapp/">AyX WhatsApp</a>
+    </div>
+  </div>
+
+</main>
+<footer><div class="wrap">© 2026 IMAYX · <a class="link" href="https://imayx.in/">imayx.in</a></div></footer>
+<script>
+(function () {
+  "use strict";
+  var params = new URLSearchParams(window.location.search);
+  var connect = params.get("connect-whatsapp") === "1";
+  document.getElementById("connect-block").hidden = !connect;
+  document.getElementById("generic-block").hidden = connect;
+  document.title = connect ? "Connect AyX WhatsApp to AyX Group — IMAYX" : "Info — IMAYX";
+})();
+</script>
+<script src="/assets/fx.js" defer></script>
+</body>
+</html>
