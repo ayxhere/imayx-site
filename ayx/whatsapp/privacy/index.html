@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Privacy Policy — WhatsAyX</title>
+<meta name="description" content="How WhatsAyX handles data: everything stays on your device. No accounts, no analytics, no cloud.">
+<link rel="stylesheet" href="/ayx/whatsapp/wa.css">
+</head>
+<body>
+<div id="bar"></div>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="/ayx/whatsapp/"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></i>WhatsAyX</a>
+  <div class="links"><a class="keep" href="/ayx/whatsapp/">App</a><a class="on keep" href="/ayx/whatsapp/privacy/">Privacy</a></div>
+</div></nav>
+
+<header class="doc-hero">
+  <div class="aurora"><b></b><b></b><b></b></div><div class="grid-bg"></div>
+  <div class="wrap">
+    <span class="pill rv"><span class="dot"></span>Privacy Policy</span>
+    <h1 class="rv">Your data stays <em>on your phone.</em></h1>
+    <p class="lead rv">This policy explains what WhatsAyX processes, what it never collects, and the few cases where data leaves your device because you asked it to.</p>
+    <div class="updated rv" style="margin-top:18px"><span>Effective: 8 October 2026</span><span>Last updated: 8 October 2026</span><span>App: WhatsAyX (ayx.whatsapp)</span></div>
+    <div class="tldr">
+      <div class="card rv"><h3>No account</h3><p>You never sign up with us. There is no WhatsAyX login.</p></div>
+      <div class="card rv"><h3>No cloud</h3><p>There is no WhatsAyX server that receives your messages or contacts.</p></div>
+      <div class="card rv"><h3>No tracking</h3><p>No ads, no analytics SDKs, no profiling.</p></div>
+      <div class="card rv"><h3>You're in control</h3><p>Log out or uninstall and the local data is gone.</p></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap"><div class="layout">
+  <aside class="toc">
+    <h4>On this page</h4>
+    <a href="#who">Who we are</a><a href="#data">Data on your device</a><a href="#never">What we don't collect</a><a href="#third">Third parties</a><a href="#perm">Permissions</a><a href="#security">Storage &amp; security</a><a href="#control">Your control</a><a href="#unofficial">Unofficial app notice</a><a href="#kids">Children</a><a href="#changes">Changes</a><a href="#contact">Contact</a>
+  </aside>
+
+  <article class="prose">
+    <section id="who" class="rv"><h2>1. Who we are</h2>
+      <p>WhatsAyX ("the app", "we") is an Android app developed by <strong>imayx</strong>, an independent developer. The app runs a WhatsApp automation gateway locally on your own device.</p>
+      <p>We do not operate a backend for the app. Because of that, we are not able to see your messages, contacts, or credentials.</p>
+    </section>
+
+    <section id="data" class="rv"><h2>2. Data processed on your device</h2>
+      <p>To work, the app handles the following data <strong>locally</strong>. It is stored in the app's private storage and is not sent to us.</p>
+      <div class="tbl">
+        <div><span>Data</span><span>Why it's needed</span></div>
+        <div><b>Session credentials</b><span>Keep your linked WhatsApp session connected. Stored in app-private storage excluded from backups.</span></div>
+        <div><b>Messages &amp; media metadata</b><span>Show chats, run auto-reply, scheduling, anti-delete and reactions.</span></div>
+        <div><b>Contacts &amp; groups</b><span>Display names and groups synced from your linked session.</span></div>
+        <div><b>Rules &amp; settings</b><span>Your keywords, replies, schedules, webhook URLs and preferences.</span></div>
+        <div><b>Local logs</b><span>Troubleshooting inside the app. Sensitive values are redacted.</span></div>
+      </div>
+    </section>
+
+    <section id="never" class="rv"><h2>3. What we do not collect</h2>
+      <ul>
+        <li>We do not collect your name, email, phone number or location.</li>
+        <li>We do not receive your messages, contacts, media or session credentials.</li>
+        <li>We do not use advertising IDs, analytics or crash-reporting SDKs.</li>
+        <li>We do not sell, rent or share personal data, because we do not have it.</li>
+      </ul>
+    </section>
+
+    <section id="third" class="rv"><h2>4. Third parties and data you choose to send</h2>
+      <p>The app connects to outside services only for features you use:</p>
+      <ul>
+        <li><strong>WhatsApp servers.</strong> To send and receive messages, the app talks to WhatsApp's servers using the same protocol as a linked device. WhatsApp's own terms and privacy policy apply to that traffic.</li>
+        <li><strong>AI providers (optional).</strong> If you enable AI auto-reply and add your own API key, the text of the incoming message is sent to the provider you picked to generate a reply. That provider's policy applies. Keyword auto-reply does not send anything out.</li>
+        <li><strong>Webhooks (optional).</strong> If you add a webhook URL, incoming message events are sent to that URL. You are responsible for the server that receives them.</li>
+        <li><strong>Updates and downloads.</strong> If a build offers an in-app link to download files, your device contacts that host directly.</li>
+      </ul>
+      <div class="note">If you turn on a feature that sends data to a third party, that data leaves your device at your request and is governed by that third party.</div>
+    </section>
+
+    <section id="perm" class="rv"><h2>5. Permissions</h2>
+      <div class="tbl">
+        <div><span>Permission</span><span>Used for</span></div>
+        <div><b>Internet</b><span>Connecting to WhatsApp, and to AI providers or webhooks you configure.</span></div>
+        <div><b>Foreground service</b><span>Keeping the gateway running in the background, shown by a notification.</span></div>
+        <div><b>Notifications</b><span>Showing the service status notification.</span></div>
+        <div><b>Run at startup (if enabled)</b><span>Optionally resuming the gateway after a reboot.</span></div>
+      </div>
+      <p style="margin-top:12px">The app does not request access to your SMS, call logs, camera, microphone or location.</p>
+    </section>
+
+    <section id="security" class="rv"><h2>6. Storage and security</h2>
+      <ul>
+        <li>The gateway listens only on <strong>127.0.0.1</strong> (your device), so other devices on your network cannot reach it.</li>
+        <li>Credentials are kept in private app storage that is not included in Android backups.</li>
+        <li>Secrets are redacted from the in-app logs.</li>
+      </ul>
+      <p>No system is perfectly secure. Keep your phone locked, avoid installing the app from untrusted sources, and do not share exported data.</p>
+    </section>
+
+    <section id="control" class="rv"><h2>7. Your control</h2>
+      <ul>
+        <li><strong>Log out</strong> a session in the app to remove its credentials.</li>
+        <li><strong>Clear data</strong> in Android settings, or <strong>uninstall</strong> the app, to delete everything the app stored.</li>
+        <li><strong>Unlink the device</strong> from WhatsApp → Linked devices to revoke access at the source.</li>
+      </ul>
+      <p>Since we hold no copy of your data, we cannot export or delete it on your behalf. You can do both directly on your device.</p>
+    </section>
+
+    <section id="unofficial" class="rv"><h2>8. Unofficial app notice</h2>
+      <p>WhatsAyX is independent and is <strong>not affiliated with, authorized by or endorsed by WhatsApp LLC or Meta Platforms, Inc.</strong> WhatsApp is a trademark of its owner.</p>
+      <div class="note">Using unofficial clients or automation can violate WhatsApp's terms of service and may lead to account restrictions or bans. You use the app at your own risk and are responsible for complying with applicable laws and the terms of the services you connect to. Do not use it for spam or unsolicited bulk messaging.</div>
+    </section>
+
+    <section id="kids" class="rv"><h2>9. Children</h2>
+      <p>The app is not directed to children under 13 (or the minimum age required in your country). We do not knowingly collect data from children.</p>
+    </section>
+
+    <section id="changes" class="rv"><h2>10. Changes to this policy</h2>
+      <p>If this policy changes, we will update the date at the top of this page. Material changes will be reflected here before they take effect.</p>
+    </section>
+
+    <section id="contact" class="rv"><h2>11. Contact</h2>
+      <p>Questions about this policy? Open an issue on GitHub: <a href="https://github.com/ayxhere/AyXWhatsapp/issues">github.com/ayxhere/AyXWhatsapp</a>, or visit <a href="/about/">the developer page</a>.</p>
+    </section>
+  </article>
+</div></main>
+
+<footer><div class="wrap">
+  <div>© <span id="yr">2026</span> imayx · WhatsAyX</div>
+  <nav><a href="/">Home</a><a href="/ayx/whatsapp/">WhatsAyX</a><a href="/about/">About</a><a href="https://github.com/ayxhere">GitHub</a></nav>
+</div>
+<p class="disc">WhatsAyX is an independent app and is not affiliated with WhatsApp LLC or Meta Platforms, Inc.</p></footer>
+<script src="/ayx/whatsapp/wa.js"></script>
+</body></html>

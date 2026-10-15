@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>WhatsAyX — On-device WhatsApp automation for Android</title>
+<meta name="description" content="WhatsAyX runs a complete WhatsApp gateway on your Android phone. Multi-session, auto-reply, scheduling, webhooks. No server, no cloud.">
+<meta property="og:title" content="WhatsAyX — On-device WhatsApp automation">
+<meta property="og:description" content="Your phone is the server. Multi-session, auto-reply, scheduling, webhooks. No cloud.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/ayx/whatsapp/wa.css">
+</head>
+<body>
+<div id="bar"></div>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="/ayx/whatsapp/"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></i>WhatsAyX</a>
+  <div class="links">
+    <a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
+    <a class="keep" href="/ayx/whatsapp/privacy/">Privacy</a>
+    <a class="cta js-download" href="#download">Download</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="aurora"><b></b><b></b><b></b></div><div class="grid-bg"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill rv"><span class="dot"></span>Runs 100% on your phone</span>
+      <h1 class="rv">Your phone is the <em>WhatsApp&nbsp;server.</em></h1>
+      <p class="lead rv">WhatsAyX embeds Node.js inside an Android app and turns your device into a full WhatsApp gateway: auto-reply, scheduling, webhooks and multi-session. No Termux. No VPS. No cloud.</p>
+      <div class="cta-row rv">
+        <a class="btn p js-download" href="#download" id="download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg> Download APK</a>
+        <a class="btn" href="#features">Explore features</a>
+      </div>
+      <div class="meta rv">
+        <span><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>Android 7.0+</span>
+        <span><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>No ads, no tracking</span>
+        <span><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>Data stays on device</span>
+      </div>
+    </div>
+    <div class="phone-wrap rv">
+      <div class="phone-stage">
+        <div class="halo"></div>
+        <div class="chip-float a"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>Auto-reply · 0.4s</div>
+        <div class="chip-float b"><svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 100-20 10 10 0 000 20zm1-15h-2v6l5 3 1-1.7-4-2.3z"/></svg>Scheduled 09:00</div>
+        <div class="chip-float c"><svg viewBox="0 0 24 24"><path d="M12 1l9 4v6c0 5.5-3.8 10.7-9 12-5.2-1.3-9-6.5-9-12V5z"/></svg>Stored on-device</div>
+        <div class="phone"><div class="screen">
+          <div class="deck" id="deck" aria-roledescription="carousel" aria-label="WhatsAyX app screens">
+            <div class="slides" id="slides">
+
+              <section class="pane" data-name="Home">
+                <div class="s-top"><div class="av">A</div><div><b>WhatsAyX</b><small>Gateway running</small></div><span class="sw on" style="margin-left:auto"></span></div>
+                <div class="p-body stg">
+                  <div class="hcard"><small>Session · main</small><b>Connected</b><div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                  <div class="ms"><div><b>128</b><span>Received</span></div><div><b>94</b><span>Auto-replied</span></div><div><b>6</b><span>Scheduled</span></div></div>
+                  <div class="cap">Quick access</div>
+                  <div class="tiles"><div>Sessions</div><div>Rules</div><div>Webhooks</div><div>Logs</div></div>
+                </div>
+              </section>
+
+              <section class="pane" data-name="Chat preview">
+                <div class="s-top"><div class="av">C</div><div><b>Customer</b><small>online</small></div></div>
+                <div class="chat" id="chat">
+                  <div class="msg in">Hi! Do you ship to Mumbai?<small style="color:#6d6d7a;text-align:left">09:41</small></div>
+                  <div class="msg out"><span class="tag">auto-reply · keyword</span><br>Yes, we deliver across India in 2–4 days.<small>09:41 ✓✓</small></div>
+                  <div class="msg in">What's the price?</div>
+                  <div class="msg out"><span class="tag">auto-reply · AI</span><br>The Starter plan is ₹499/mo. Want the full price list?<small>09:42 ✓✓</small></div>
+                  <div class="msg in">Yes please 🙏</div>
+                  <div class="typing"><i></i><i></i><i></i></div>
+                </div>
+                <div class="s-foot"><div>Message</div><i></i></div>
+              </section>
+
+              <section class="pane" data-name="Settings">
+                <div class="s-top"><div class="av">⚙</div><div><b>Settings</b><small>Session · main</small></div></div>
+                <div class="p-body stg">
+                  <div class="row">Always online<span class="sw on late"></span></div>
+                  <div class="row">Auto-read<span class="sw on late"></span></div>
+                  <div class="row">Anti-delete<span class="sw on late"></span></div>
+                  <div class="row">Reactions<span class="sw"></span></div>
+                  <div class="row">Presence control<span class="sw on late"></span></div>
+                  <div class="row go" data-go="3"><div>AI assistant<small>Provider, prompt, auto-reply</small></div></div>
+                </div>
+              </section>
+
+              <section class="pane" data-name="AI assistant">
+                <div class="s-top"><div class="av">✦</div><div><b>AI assistant</b><small>Settings</small></div><span class="sw on late" style="margin-left:auto"></span></div>
+                <div class="p-body stg">
+                  <div class="field"><small>Provider</small><span>Custom · your own key</span></div>
+                  <div class="field"><small>Model</small><span>gpt-4o-mini</span></div>
+                  <div class="field area"><small>System prompt</small><span>You are the support assistant for my shop. Reply short, polite and in the customer's language</span></div>
+                  <div class="field"><small>Creativity</small><div class="rng"><i></i></div></div>
+                  <div class="chips"><span class="on">Private chats</span><span>Groups</span><span class="on">Keywords first</span></div>
+                </div>
+              </section>
+
+              <section class="pane" data-name="Voice AI">
+                <div class="s-top"><div class="av">♪</div><div><b>Voice AI</b><small>Hindi · English</small></div></div>
+                <div class="voice stg">
+                  <div class="mic"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v4"/></svg></div>
+                  <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="vstate">Listening…</div>
+                  <div class="bubble">“Send good morning to the team group at 9”</div>
+                  <div class="bubble r">Done. Scheduled for 09:00 ✓</div>
+                </div>
+              </section>
+
+              <section class="pane" data-name="Schedule">
+                <div class="s-top"><div class="av">◷</div><div><b>Scheduled</b><small>3 queued</small></div></div>
+                <div class="p-body stg">
+                  <div class="sch"><time>09:00</time><div>Good morning<small>Team group</small></div></div>
+                  <div class="sch"><time>13:30</time><div>Invoice reminder<small>Customer · Rahul</small></div></div>
+                  <div class="sch"><time>18:00</time><div>Daily status<small>Webhook + chat</small></div></div>
+                  <div class="addbtn">+ New schedule</div>
+                </div>
+              </section>
+
+            </div>
+          </div>
+          <div class="s-nav" id="snav"><button type="button" data-go="0" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg></button><button type="button" data-go="1" aria-label="Chat"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></button><button type="button" data-go="2" aria-label="Settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg></button><button type="button" data-go="3" aria-label="AI assistant"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg></button><button type="button" data-go="4" aria-label="Voice AI"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v4"/></svg></button><button type="button" data-go="5" aria-label="Schedule"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></button></div>
+        </div></div>
+      </div>
+      <div class="deck-ui">
+        <div class="deck-lbl" id="deckLbl">Home</div>
+        <div class="dots" id="dots"><button type="button" data-go="0" aria-label="Home screen"></button><button type="button" data-go="1" aria-label="Chat screen"></button><button type="button" data-go="2" aria-label="Settings screen"></button><button type="button" data-go="3" aria-label="AI assistant screen"></button><button type="button" data-go="4" aria-label="Voice AI screen"></button><button type="button" data-go="5" aria-label="Schedule screen"></button></div>
+        <div class="hint"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Swipe to explore screens</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track">
+  <span><b>●</b>Multi-session</span><span><b>●</b>Keyword auto-reply</span><span><b>●</b>AI auto-reply</span><span><b>●</b>Scheduled messages</span><span><b>●</b>Webhooks</span><span><b>●</b>REST API</span><span><b>●</b>Always online</span><span><b>●</b>Auto-read</span><span><b>●</b>Anti-delete</span><span><b>●</b>Reactions</span><span><b>●</b>Contacts &amp; groups</span><span><b>●</b>Presence control</span>
+  <span><b>●</b>Multi-session</span><span><b>●</b>Keyword auto-reply</span><span><b>●</b>AI auto-reply</span><span><b>●</b>Scheduled messages</span><span><b>●</b>Webhooks</span><span><b>●</b>REST API</span><span><b>●</b>Always online</span><span><b>●</b>Auto-read</span><span><b>●</b>Anti-delete</span><span><b>●</b>Reactions</span><span><b>●</b>Contacts &amp; groups</span><span><b>●</b>Presence control</span>
+</div></div>
+
+<section class="sec" id="features"><div class="wrap">
+  <div class="center rv"><div class="eyebrow">Features</div><h2>Everything a gateway needs.<br>Nothing a server costs.</h2><p class="sub">The same options you'd expect from a server-side WhatsApp tool, packed into one native app with a clean AMOLED dashboard.</p></div>
+  <div class="features">
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></div><h3>Multi-session</h3><p>Link several WhatsApp numbers and manage each one separately from a single dashboard.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3>Smart auto-reply</h3><p>Reply by keyword rules, or connect an AI provider of your choice for natural answers.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Scheduling</h3><p>Queue messages for later and let the app deliver them on time, even with the screen off.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg></div><h3>Webhooks &amp; REST API</h3><p>Forward incoming messages to your own URL and send through a local API from your apps.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div><h3>Always-online &amp; auto-read</h3><p>Keep presence steady and mark chats as read automatically, with fine controls per session.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v5M14 11v5"/></svg></div><h3>Anti-delete</h3><p>Keep a local copy of messages that get deleted for everyone, stored only on your device.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div><h3>Reactions</h3><p>React to messages automatically or on demand, in single chats and groups.</p></div>
+    <div class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div><h3>Contacts &amp; groups</h3><p>Browse contacts, see group sender names, and control online and last-seen presence.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="center rv"><div class="eyebrow">Built different</div><h2>No server. Really.</h2><p class="sub">Node.js and Baileys run inside the APK. The UI talks to a service on 127.0.0.1, so nothing is exposed to the internet unless you choose to.</p></div>
+  <div class="stats">
+    <div class="stat rv"><b data-to="0" data-suf="">0</b><span>servers to rent</span></div>
+    <div class="stat rv"><b data-to="100" data-suf="%">0</b><span>on-device processing</span></div>
+    <div class="stat rv"><b data-to="8" data-suf="+">0</b><span>automation tools</span></div>
+    <div class="stat rv"><b data-to="127" data-suf=".0.0.1">0</b><span>local-only server address</span></div>
+  </div>
+  <div class="code rv"><div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c"># send a message through the local API</span>
+<span class="k">curl</span> -X POST http://127.0.0.1:&lt;port&gt;/api/send \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -d <span class="s">'{"session":"main","to":"91XXXXXXXXXX","text":"Hello from WhatsAyX"}'</span></pre></div>
+  <p class="rv" style="color:var(--dim);font-size:13px;margin-top:10px">Example only — endpoint names and port are shown inside the app.</p>
+</div></section>
+
+<section class="sec" id="how"><div class="wrap">
+  <div class="center rv"><div class="eyebrow">How it works</div><h2>Up and running in a minute.</h2></div>
+  <div class="how">
+    <div class="step rv"><h3>Install</h3><p>Download the APK, allow install from your browser or file manager, and open WhatsAyX.</p></div>
+    <div class="step rv"><h3>Link a number</h3><p>Create a session and pair with a code, the same way you link any companion device.</p></div>
+    <div class="step rv"><h3>Automate</h3><p>Turn on auto-reply, schedule messages, add webhooks. The foreground service keeps it running.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="faq" style="padding-top:20px"><div class="wrap" style="max-width:780px">
+  <div class="center rv"><div class="eyebrow">FAQ</div><h2>Good questions.</h2></div>
+  <details class="rv"><summary>Is this an official WhatsApp app?</summary><p>No. WhatsAyX is an independent project and is not affiliated with, endorsed by or sponsored by WhatsApp or Meta. "WhatsApp" is a trademark of its owner.</p></details>
+  <details class="rv"><summary>Where is my data stored?</summary><p>On your device. Session credentials and message data stay in the app's private storage. There is no WhatsAyX cloud. See the <a href="/ayx/whatsapp/privacy/" style="color:var(--g2)">Privacy Policy</a>.</p></details>
+  <details class="rv"><summary>Can my number get banned?</summary><p>Automation with unofficial clients can break WhatsApp's terms and may lead to restrictions. Use it responsibly, avoid spam and bulk unsolicited messaging, and prefer a number you can afford to risk.</p></details>
+  <details class="rv"><summary>Does it work in the background?</summary><p>Yes, through an Android foreground service with a notification. Some phone brands kill background apps, so you may need to disable battery optimization for WhatsAyX.</p></details>
+  <details class="rv"><summary>What does AI auto-reply send out?</summary><p>Only if you turn it on and add your own provider key: the incoming message text is sent to that provider to generate the reply. Keyword replies never leave your phone.</p></details>
+  <details class="rv"><summary>Which Android versions are supported?</summary><p>Android 7.0 and above, on 64-bit (arm64) devices.</p></details>
+</div></section>
+
+<section class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="final rv">
+    <div class="eyebrow">Ready?</div>
+    <h2>Turn your phone into a gateway.</h2>
+    <p class="sub" style="margin:0 auto">Free to try. Takes a minute to set up.</p>
+    <div class="cta-row"><a class="btn p js-download" href="#download"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg> Download APK</a><a class="btn" href="/ayx/whatsapp/privacy/">Read the privacy policy</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© <span id="yr">2026</span> imayx · WhatsAyX</div>
+  <nav><a href="/">Home</a><a href="/about/">About</a><a href="/ayx/whatsapp/privacy/">Privacy Policy</a><a href="https://github.com/ayxhere">GitHub</a></nav>
+</div>
+<p class="disc">WhatsAyX is an independent app and is not affiliated with WhatsApp LLC or Meta Platforms, Inc. WhatsApp is a trademark of its respective owner.</p></footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+  /* PUT YOUR APK / STORE LINK HERE, e.g. "https://github.com/ayxhere/AyXWhatsapp/releases/latest" */
+  window.WA_DOWNLOAD_URL = "https://github.com/ayxhere/AyXWhatsapp/releases/download/release/app-release.apk";
+</script>
+<script src="/ayx/whatsapp/wa.js"></script>
+</body></html>
